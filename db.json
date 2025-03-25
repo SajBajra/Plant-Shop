@@ -1,0 +1,264 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Admin",
+      "lastName": "User",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "isAdmin": true
+    },
+    {
+      "id": "0571",
+      "firstName": "new",
+      "lastName": "new",
+      "email": "new@gmail.com",
+      "password": "new",
+      "isAdmin": false
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Indoor Plants"
+    },
+    {
+      "id": 2,
+      "name": "Outdoor Plants"
+    },
+    {
+      "id": 3,
+      "name": "Succulents"
+    },
+    {
+      "id": 4,
+      "name": "Flowering Plants"
+    },
+    {
+      "id": 5,
+      "name": "Herbs"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Monstera Deliciosa",
+      "price": 29.99,
+      "description": "The Swiss Cheese Plant, known for its unique leaf holes and easy care.",
+      "image": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "Snake Plant",
+      "price": 19.99,
+      "description": "A hardy succulent that can survive in low light and with minimal watering.",
+      "image": "https://images.unsplash.com/photo-1572688484438-313a6e50c333",
+      "categoryId": 1
+    },
+    {
+      "id": 3,
+      "name": "Fiddle Leaf Fig",
+      "price": 49.99,
+      "description": "A popular indoor tree with large, violin-shaped leaves that can grow up to 10 feet tall.",
+      "image": "https://images.unsplash.com/photo-1508022713622-df2d8fb7b4cd",
+      "categoryId": 1
+    },
+    {
+      "id": 4,
+      "name": "Peace Lily",
+      "price": 24.99,
+      "description": "An easy-care plant with glossy leaves and white flowers that thrives in low light.",
+      "image": "https://images.unsplash.com/photo-1593482892290-f54927ae2321",
+      "categoryId": 4
+    },
+    {
+      "id": 5,
+      "name": "Pothos",
+      "price": 15.99,
+      "description": "A trailing vine with heart-shaped leaves that's nearly impossible to kill.",
+      "image": "https://images.unsplash.com/photo-1507746212228-2d3645cbeb56",
+      "categoryId": 1
+    },
+    {
+      "id": 6,
+      "name": "ZZ Plant",
+      "price": 22.99,
+      "description": "A drought-tolerant plant with glossy leaves that can handle neglect and low light.",
+      "image": "https://images.unsplash.com/photo-1572686972126-be2b38bc138e",
+      "categoryId": 1
+    },
+    {
+      "id": 7,
+      "name": "Rubber Plant",
+      "price": 34.99,
+      "description": "A popular houseplant with thick, glossy leaves that's easy to care for.",
+      "image": "https://images.unsplash.com/photo-1594576722256-a3f68e39ed26",
+      "categoryId": 1
+    },
+    {
+      "id": 8,
+      "name": "Aloe Vera",
+      "price": 12.99,
+      "description": "A succulent with healing properties that thrives in bright, indirect light.",
+      "image": "https://images.unsplash.com/photo-1509423350716-97f9360b4e09",
+      "categoryId": 3
+    },
+    {
+      "id": 9,
+      "name": "Spider Plant",
+      "price": 14.99,
+      "description": "A classic houseplant that produces baby plantlets and is safe for pets.",
+      "image": "https://images.unsplash.com/photo-1572688985715-89801e7b7c4a",
+      "categoryId": 1
+    },
+    {
+      "id": 10,
+      "name": "Basil",
+      "price": 8.99,
+      "description": "A fragrant herb perfect for cooking and easy to grow indoors or outdoors.",
+      "image": "https://images.unsplash.com/photo-1518977676601-b53f82aba655",
+      "categoryId": 5
+    },
+    {
+      "id": 11,
+      "name": "Mint",
+      "price": 7.99,
+      "description": "A refreshing herb that grows quickly and is perfect for teas and cocktails.",
+      "image": "https://images.unsplash.com/photo-1628556270448-4d4e4148e1b1",
+      "categoryId": 5
+    },
+    {
+      "id": 12,
+      "name": "Hydrangea",
+      "price": 39.99,
+      "description": "A beautiful flowering shrub that produces large blooms in blue, pink, or white.",
+      "image": "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2",
+      "categoryId": 2
+    },
+    {
+      "id": "64b0",
+      "name": "test",
+      "price": 259,
+      "categoryId": 5,
+      "description": "new test hehe",
+      "image": "https://images.unsplash.com/photo-1566914447826-bf04e54bf1be?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ],
+  "carts": [
+    {
+      "id": "ba2d",
+      "userId": "4a77",
+      "items": []
+    },
+    {
+      "userId": 1,
+      "items": [],
+      "id": "9b51"
+    },
+    {
+      "id": "7e5f",
+      "userId": 1,
+      "items": []
+    },
+    {
+      "userId": "0571",
+      "items": [],
+      "id": "660c"
+    }
+  ],
+  "orders": [
+    {
+      "id": "dd72",
+      "userId": "0571",
+      "items": [
+        {
+          "id": 1,
+          "name": "Monstera Deliciosa",
+          "price": 29.99,
+          "description": "The Swiss Cheese Plant, known for its unique leaf holes and easy care.",
+          "image": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b",
+          "categoryId": 1,
+          "quantity": 1
+        },
+        {
+          "id": 2,
+          "name": "Snake Plant",
+          "price": 19.99,
+          "description": "A hardy succulent that can survive in low light and with minimal watering.",
+          "image": "https://images.unsplash.com/photo-1572688484438-313a6e50c333",
+          "categoryId": 1,
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "name": "Fiddle Leaf Fig",
+          "price": 49.99,
+          "description": "A popular indoor tree with large, violin-shaped leaves that can grow up to 10 feet tall.",
+          "image": "https://images.unsplash.com/photo-1508022713622-df2d8fb7b4cd",
+          "categoryId": 1,
+          "quantity": 1
+        },
+        {
+          "id": 4,
+          "name": "Peace Lily",
+          "price": 24.99,
+          "description": "An easy-care plant with glossy leaves and white flowers that thrives in low light.",
+          "image": "https://images.unsplash.com/photo-1593482892290-f54927ae2321",
+          "categoryId": 4,
+          "quantity": 1
+        }
+      ],
+      "customer": {
+        "firstName": "new",
+        "lastName": "new",
+        "email": "new@gmail.com",
+        "address": "nepal",
+        "city": "nepa",
+        "state": "nepa",
+        "zipCode": "24"
+      },
+      "paymentMethod": "paypal",
+      "total": 124.96,
+      "date": "2025-03-25T06:39:43.560Z",
+      "status": "pending"
+    },
+    {
+      "id": "13e4",
+      "userId": "0571",
+      "items": [
+        {
+          "id": 1,
+          "name": "Monstera Deliciosa",
+          "price": 29.99,
+          "description": "The Swiss Cheese Plant, known for its unique leaf holes and easy care.",
+          "image": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b",
+          "categoryId": 1,
+          "quantity": 5
+        },
+        {
+          "id": 2,
+          "name": "Snake Plant",
+          "price": 19.99,
+          "description": "A hardy succulent that can survive in low light and with minimal watering.",
+          "image": "https://images.unsplash.com/photo-1572688484438-313a6e50c333",
+          "categoryId": 1,
+          "quantity": 1
+        }
+      ],
+      "customer": {
+        "firstName": "new",
+        "lastName": "new",
+        "email": "new@gmail.com",
+        "address": "nepal",
+        "city": "nepa",
+        "state": "nepa",
+        "zipCode": "24"
+      },
+      "paymentMethod": "credit",
+      "total": 169.94,
+      "date": "2025-03-25T06:48:40.376Z",
+      "status": "shipped"
+    }
+  ]
+}

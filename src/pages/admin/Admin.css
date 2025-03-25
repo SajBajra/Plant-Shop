@@ -1,0 +1,109 @@
+/* Admin Layout Styles */
+.admin-sider {
+  overflow-y: auto;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  background: #001529; /* Adjust for better contrast */
+  color: white;
+}
+
+/* Ensure content does not get hidden under sidebar */
+.admin-content {
+  width: 1140px;
+  margin-left: 250px;
+  padding: 16px;
+  min-height: calc(100vh - 64px); /* Adjust 64px based on your navbar height */
+  /* or use flex: 1; if the .admin-content is a flex item */
+}
+
+.admin-logo {
+  height: 40px;
+  margin: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dashboard Styles */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.dashboard-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card-icon {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+/* Table and Form Styles */
+.dashboard-table-header,
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .admin-sider {
+    width: 200px;
+  }
+
+  .admin-content {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-sider {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .admin-content {
+    margin-left: 0;
+  }
+
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
