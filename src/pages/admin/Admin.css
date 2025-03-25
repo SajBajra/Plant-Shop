@@ -6,17 +6,15 @@
   left: 0;
   top: 0;
   width: 250px;
-  background: #001529; /* Adjust for better contrast */
+  background: #001529;
   color: white;
 }
 
-/* Ensure content does not get hidden under sidebar */
 .admin-content {
   width: 1140px;
   margin-left: 250px;
   padding: 16px;
-  min-height: calc(100vh - 64px); /* Adjust 64px based on your navbar height */
-  /* or use flex: 1; if the .admin-content is a flex item */
+  min-height: calc(100vh - 64px);
 }
 
 .admin-logo {

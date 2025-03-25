@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import { Link, useNavigate } from "react-router"
 import { useAuth } from "../context/AuthContext"
@@ -39,7 +37,6 @@ const Signup = () => {
     setLoading(true)
 
     try {
-      // Create new user object without confirmPassword
       const newUser = {
         firstName: formData.firstName,
         lastName: formData.lastName,
@@ -47,7 +44,6 @@ const Signup = () => {
         password: formData.password,
       }
 
-      // Register user
       await register(newUser)
       navigate("/")
     } catch (err) {

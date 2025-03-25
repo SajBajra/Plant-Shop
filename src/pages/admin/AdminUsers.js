@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { Table, Button, Modal, Typography, Descriptions, Tag, message } from "antd"
 import { EyeOutlined } from "@ant-design/icons"

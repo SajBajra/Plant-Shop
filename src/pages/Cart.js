@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { Link, useNavigate } from "react-router"
 import { useCart } from "../context/CartContext"
@@ -11,7 +9,6 @@ const Cart = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    // Calculate total price
     const newTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
     setTotal(newTotal)
   }, [cart])

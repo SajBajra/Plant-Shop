@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import ProductCard from "../components/ProductCard"
 import { productService, categoryService } from "../services/api"
@@ -18,7 +16,6 @@ const Shop = () => {
     const fetchData = async () => {
       try {
         setLoading(true)
-        // Fetch products and categories in parallel
         const [productsData, categoriesData] = await Promise.all([
           productService.getProducts(),
           categoryService.getCategories(),
@@ -39,15 +36,10 @@ const Shop = () => {
   }, [])
 
   useEffect(() => {
-    // Filter products based on search term and category
     let results = products
-
-    // Filter by category
     if (selectedCategory !== "all") {
       results = results.filter((product) => product.categoryId === Number.parseInt(selectedCategory))
     }
-
-    // Filter by search term
     if (searchTerm.trim() !== "") {
       results = results.filter(
         (product) =>

@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import {
   Table,
@@ -31,12 +29,10 @@ const AdminProducts = () => {
   const [form] = Form.useForm()
   const [editingProductId, setEditingProductId] = useState(null)
 
-  // Fetch products and categories when component mounts
   useEffect(() => {
     fetchData()
   }, [])
 
-  // Fetch product and category data
   const fetchData = async () => {
     try {
       setLoading(true)
@@ -55,7 +51,6 @@ const AdminProducts = () => {
     }
   }
 
-  // Open modal for adding a product
   const showAddModal = () => {
     setModalTitle("Add Product")
     setEditingProductId(null)
@@ -63,7 +58,6 @@ const AdminProducts = () => {
     setModalVisible(true)
   }
 
-  // Open modal for editing a product
   const showEditModal = (product) => {
     setModalTitle("Edit Product")
     setEditingProductId(product.id)
@@ -71,12 +65,10 @@ const AdminProducts = () => {
     setModalVisible(true)
   }
 
-  // Close modal
   const handleCancel = () => {
     setModalVisible(false)
   }
 
-  // Handle submit of the form (either create or update)
   const handleSubmit = async () => {
     try {
       const values = await form.validateFields()
