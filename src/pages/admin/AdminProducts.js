@@ -31,10 +31,12 @@ const AdminProducts = () => {
   const [form] = Form.useForm()
   const [editingProductId, setEditingProductId] = useState(null)
 
+  // Fetch products and categories when component mounts
   useEffect(() => {
     fetchData()
   }, [])
 
+  // Fetch product and category data
   const fetchData = async () => {
     try {
       setLoading(true)
@@ -45,14 +47,15 @@ const AdminProducts = () => {
 
       setProducts(productsData)
       setCategories(categoriesData)
-      setLoading(false)
     } catch (error) {
       console.error("Error fetching data:", error)
       message.error("Failed to load data")
+    } finally {
       setLoading(false)
     }
   }
 
+  // Open modal for adding a product
   const showAddModal = () => {
     setModalTitle("Add Product")
     setEditingProductId(null)
@@ -60,33 +63,28 @@ const AdminProducts = () => {
     setModalVisible(true)
   }
 
+  // Open modal for editing a product
   const showEditModal = (product) => {
     setModalTitle("Edit Product")
     setEditingProductId(product.id)
-    form.setFieldsValue({
-      name: product.name,
-      price: product.price,
-      description: product.description,
-      image: product.image,
-      categoryId: product.categoryId,
-    })
+    form.setFieldsValue(product)
     setModalVisible(true)
   }
 
+  // Close modal
   const handleCancel = () => {
     setModalVisible(false)
   }
 
+  // Handle submit of the form (either create or update)
   const handleSubmit = async () => {
     try {
       const values = await form.validateFields()
 
       if (editingProductId) {
-        // Update existing product
         await productService.updateProduct(editingProductId, values)
         message.success("Product updated successfully")
       } else {
-        // Create new product
         await productService.createProduct(values)
         message.success("Product added successfully")
       }
@@ -99,6 +97,7 @@ const AdminProducts = () => {
     }
   }
 
+  // Handle delete of product
   const handleDelete = async (id) => {
     try {
       await productService.deleteProduct(id)
@@ -200,7 +199,7 @@ const AdminProducts = () => {
           <Form.Item
             name="name"
             label="Product Name"
-            rules={[{ required: true, message: "Please enter product name" }]}>
+            rules={[{ required: true, message: "Please enter product name" }]} >
             <Input />
           </Form.Item>
 
